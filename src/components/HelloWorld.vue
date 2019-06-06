@@ -25,6 +25,20 @@ export default {
     return {
 
     }
+  },
+  mounted() {
+    this.init();
+  },
+  methods: {
+    init() {
+      this.$axios.get('/upload/common/alphaConfig.action')
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
   }
 }
 </script>
@@ -42,31 +56,29 @@ export default {
   max-height: 100%;
 }
 
-
 .animated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .swing {
-   -webkit-animation-name: slideOutUp;
-    animation-name: slideOutUp;
+  -webkit-animation-name: slideOutUp;
+  animation-name: slideOutUp;
 }
 
 @keyframes slideOutUp {
-    0% {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-    50% {
-        -webkit-transform: translate3d(0, -100%, 0);
-        transform: translate3d(0, -100%, 0);
-    }
-    to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
-
 </style>
