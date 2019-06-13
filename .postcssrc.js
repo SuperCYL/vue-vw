@@ -6,9 +6,13 @@ module.exports = {
         "postcss-url": {},
         "postcss-aspect-ratio-mini": {},
         "postcss-write-svg": { utf8: false },
+        "postcss-write-svg": {
+            utf8: false
+        },
         "postcss-cssnext": {},
         "postcss-px-to-viewport": {
             viewportWidth: 414,
+            viewportHeight: 736,
             unitPrecision: 3,
             viewportUnit: 'vw',
             selectorBlackList: ['.ignore', '.hairlines'],

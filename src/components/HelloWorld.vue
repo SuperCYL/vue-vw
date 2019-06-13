@@ -2,8 +2,8 @@
   <div class="hello">
     <mt-header title="多个按钮">
   <div slot="left">
-    <mt-button v-link="'/'" icon="back">返回</mt-button>
-    <mt-button @click="handleClose">关闭</mt-button>
+    <mt-button icon="back">返回</mt-button>
+    <mt-button>关闭</mt-button>
   </div>
   <mt-button icon="more" slot="right"></mt-button>
 </mt-header>
@@ -28,9 +28,9 @@
     </ul> -->
     <div style="height:200px;">
       <mt-swipe :auto="1500">
-        <mt-swipe-item><img src="../assets/1.jpg" alt=""></mt-swipe-item>
-        <mt-swipe-item><img src="../assets/2.jpg" alt=""></mt-swipe-item>
-        <mt-swipe-item><img src="../assets/4.jpg" alt=""></mt-swipe-item>
+        <mt-swipe-item><img style="width:100%;height:100%;max-width:100%;max-height:100%;" src="../assets/1.jpg" alt=""></mt-swipe-item>
+        <mt-swipe-item><img style="width:100%;height:100%;max-width:100%;max-height:100%;" src="../assets/2.jpg" alt=""></mt-swipe-item>
+        <mt-swipe-item><img style="width:100%;height:100%;max-width:100%;max-height:100%;" src="../assets/4.jpg" alt=""></mt-swipe-item>
       </mt-swipe>
     </div>
   </div>
@@ -82,6 +82,7 @@ export default {
   height: 100%;
   max-width: 100%;
   max-height: 100%;
+  object-fit: cover;
 }
 
 .animated {
@@ -91,10 +92,23 @@ export default {
   animation-fill-mode: both;
 }
 .swing {
+  border-bottom:1px solid blue;
+  position: relative;
+  margin:20px 0;
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
-
+.swing::after{
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background-color: blue;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+}
 @keyframes slideOutUp {
   0% {
     -webkit-transform: translate3d(0, 0, 0);
