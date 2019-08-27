@@ -1,34 +1,33 @@
 <template>
-  <div class="hi">
-    <mt-header title="long long long long title">
+  <div class="home">
+    <mt-header title="标题" fixed>
       <router-link to="/" slot="left">
-        <mt-button icon="back">back</mt-button>
+        <mt-button icon="back">返回</mt-button>
       </router-link>
-      <mt-button icon="more" slot="right"></mt-button>
+      <!-- <mt-button icon="more" slot="right"></mt-button> -->
     </mt-header>
+    <router-view />
     <mt-tabbar v-model="selected" fixed>
-      <mt-tab-item id="外卖">
+      <mt-tab-item id="recommend">
         <i class="mint-toast-icon mintui mintui-search"></i> 
-        <!-- <img slot="icon" src="../assets/100x100.png"> -->
-        外卖
+        推荐
       </mt-tab-item>
-      <mt-tab-item id="订单">
-        <!-- <img slot="icon" src="../assets/100x100.png"> -->
-        订单
+      <mt-tab-item id="highgoods">
+        精品
       </mt-tab-item>
-      <mt-tab-item id="发现">
-        <!-- <img slot="icon" src="../assets/100x100.png"> -->
-        发现
+      <mt-tab-item id="stunnerClub">
+        尤物社
       </mt-tab-item>
-      <mt-tab-item id="我的">
-        <!-- <img slot="icon" src="../assets/100x100.png"> -->
+      <mt-tab-item id="signing">
+        签约
+      </mt-tab-item>
+      <mt-tab-item id="my">
         我的
       </mt-tab-item>
     </mt-tabbar>
   </div>
 </template>
 <script>
-import { Tabbar, TabItem } from 'mint-ui';
 export default {
   name:"hi",
     data(){
@@ -39,13 +38,9 @@ export default {
     watch: {
       selected: function (val, oldVal) {
         console.log(val)
-        // click后打印出当前mt-tab-item的id
+          this.$router.push("/"+val)
       }
     }
 }
 </script>
-<style>
-.hi{
-  
-}
-</style>
+
