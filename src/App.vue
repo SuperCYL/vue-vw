@@ -21,4 +21,8 @@ ul>li{
 /*清除浮动代码*/
 .clearfloat:after{display:block;clear:both;content:"";visibility:hidden;height:0}
 .clearfloat{zoom:1}
+img{
+  display: block;
+  object-fit: cover;
+}
 </style>

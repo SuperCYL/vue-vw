@@ -10,6 +10,10 @@
                     <div>hi</div>
                     <img src="http://pic33.nipic.com/20131007/13639685_123501617185_2.jpg" />
                 </li>
+                <li>
+                    <div>hi</div>
+                    <img src="http://pic33.nipic.com/20131007/13639685_123501617185_2.jpg" />
+                </li>
             </ul>
         </mt-loadmore>
     </div>
@@ -30,6 +34,9 @@ export default {
 }
 </script>
 <style>
+.recommend{
+    margin:40px 0;
+}
 .recommend img{
     width:100%;
     display: block;

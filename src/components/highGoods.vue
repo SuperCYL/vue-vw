@@ -1,20 +1,21 @@
 <template>
     <div class="highGoods">
-        <mt-swipe :auto="4000">
-            <mt-swipe-item>
-                <div class="imgdiv">
-                    <img src="http://pic33.nipic.com/20131007/13639685_123501617185_2.jpg" alt="">
-                    <div class="text">你好</div>
-                </div>
-            </mt-swipe-item>
-            <mt-swipe-item>
-                <div class="imgdiv">
-                    <img src="http://pic1.win4000.com/wallpaper/c/53cdd1f7c1f21.jpg" alt="">
-                    <div class="text">你好</div>
-                </div>
-            </mt-swipe-item>
-        </mt-swipe>
-
+        <div class="high-swipe">
+             <mt-swipe :auto="4000">
+                <mt-swipe-item>
+                    <div class="imgdiv">
+                        <img src="http://pic33.nipic.com/20131007/13639685_123501617185_2.jpg" alt="">
+                        <div class="text">你好</div>
+                    </div>
+                </mt-swipe-item>
+                <mt-swipe-item>
+                    <div class="imgdiv">
+                        <img src="http://pic1.win4000.com/wallpaper/c/53cdd1f7c1f21.jpg" alt="">
+                        <div class="text">你好</div>
+                    </div>
+                </mt-swipe-item>
+            </mt-swipe>
+        </div>
         <div class="cont">
             <div class="dis">和后轴撒娇啊放假</div>
             <ul class="item-ul clearfloat">
@@ -43,7 +44,10 @@ export default {
 </script>
 <style>
 .highGoods {
-  height: 200px;
+  margin:40px 0;
+}
+.highGoods .high-swipe{
+    height:120px;
 }
 .highGoods .imgdiv{
     position: relative;

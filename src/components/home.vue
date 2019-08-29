@@ -6,7 +6,7 @@
       </router-link>
       <!-- <mt-button icon="more" slot="right"></mt-button> -->
     </mt-header>
-    <router-view />
+      <router-view />
     <mt-tabbar v-model="selected" fixed>
       <mt-tab-item id="recommend">
         <i class="mint-toast-icon mintui mintui-search"></i> 

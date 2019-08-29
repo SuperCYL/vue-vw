@@ -3,6 +3,9 @@ import Router from 'vue-router'
 import Home from '@/components/home'
 import Recommend from '@/components/recommend'
 import HighGoods from '@/components/highGoods'
+import StunnerClub from '@/components/stunnerClub'
+import Signing from '@/components/signing'
+import My from '@/components/my'
 Vue.use(Router)
 
 export default new Router({
@@ -20,6 +23,21 @@ export default new Router({
         path: "/highGoods",
         name: "HighGoods",
         component: HighGoods,
+      },
+      {
+        path: "/stunnerClub",
+        name: "StunnerClub",
+        component: StunnerClub,
+      },
+      {
+        path: "/signing",
+        name: "Signing",
+        component: Signing,
+      },
+      {
+        path: "/my",
+        name: "My",
+        component: My,
       }
       ]
     }
