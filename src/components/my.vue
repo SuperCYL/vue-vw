@@ -1,12 +1,12 @@
 <template>
     <div class="my">
-        <div style="position:relative;padding:5px">
+        <div class="head">
             <img class="user-img" src="http://pic33.nipic.com/20131007/13639685_123501617185_2.jpg" alt="">
-            <div style="position:absolute;left:80px;bottom:12px;">
+            <div class="my-name">
                 <p>aeffdsdf3423423</p>
-                <p style="color:#FF69B4;font-size:12px;">会员到期时间:2019-10-10</p>
+                <p class="date">会员到期时间:2019-10-10</p>
             </div>
-            <span style="position:absolute;right:10px;bottom:10px;display:inline-block;background:#FF69B4;padding:5px 8px;color:#fff;border-radius:30px;font-size:14px;">续费VIP</span>
+            <span class="vip-btn">续费VIP</span>
         </div>
         <mt-cell title="防止软件闪退,丢失,打不开,请点此永久保存" is-link>
             <img slot="icon" src="http://pic33.nipic.com/20131007/13639685_123501617185_2.jpg" width="24" height="24">
@@ -72,5 +72,29 @@ export default {
     width:50px;
     height:50px;
     border-radius: 4px;
+}
+.my .my-name{
+    position:absolute;
+    left:80px;
+    bottom:12px;
+}
+.my  .date{
+    color:#FF69B4;
+    font-size:12px;
+}
+.my .vip-btn{
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    display:inline-block;
+    background:#FF69B4;
+    padding:5px 8px;
+    color:#fff;
+    border-radius:30px;
+    font-size:14px;
+}
+.my .head{
+    position:relative;
+    padding:5px
 }
 </style>
