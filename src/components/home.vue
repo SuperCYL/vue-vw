@@ -47,7 +47,7 @@ export default {
           this.isShow = false;
           this.tittle = "精品";
         }else if(val=="stunnerClub"){
-          this.tittle = "尤物社";
+          this.tittle = "尤物社(需打赏)";
         }else if(val=="signing"){
           this.tittle = "签约";
         }else{
