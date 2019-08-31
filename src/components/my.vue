@@ -2,7 +2,7 @@
     <div class="my">
         <div style="position:relative;padding:5px">
             <img class="user-img" src="http://pic33.nipic.com/20131007/13639685_123501617185_2.jpg" alt="">
-            <div style="position:absolute;left:60px;bottom:12px;">
+            <div style="position:absolute;left:80px;bottom:12px;">
                 <p>aeffdsdf3423423</p>
                 <p style="color:#FF69B4;font-size:12px;">会员到期时间:2019-10-10</p>
             </div>
