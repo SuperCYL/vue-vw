@@ -6,6 +6,7 @@ import HighGoods from '@/components/highGoods'
 import StunnerClub from '@/components/stunnerClub'
 import Signing from '@/components/signing'
 import My from '@/components/my'
+import Img from '@/components/img'
 Vue.use(Router)
 
 export default new Router({
@@ -40,6 +41,11 @@ export default new Router({
         component: My,
       }
       ]
+    },
+    {
+      path: '/img',
+      name: 'Img',
+      component: Img,
     }
   ]
 })

@@ -25,4 +25,10 @@ img{
   display: block;
   object-fit: cover;
 }
+.mint-header{
+  background: #fff;
+  color:#FF0000;
+  border-bottom: 1px solid #e2e2e2;
+  font-size: 12px;
+}
 </style>
