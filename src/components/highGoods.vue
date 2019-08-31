@@ -1,5 +1,11 @@
 <template>
     <div class="highGoods">
+        <div class="head">
+            <ul class="nav clearfloat">
+                <li :class="jpactive" @click="change(1)">精品</li>
+                <li :class="flactive" @click="change(2)">分类</li>
+            </ul>
+        </div>
         <div class="high-swipe">
              <mt-swipe :auto="4000">
                 <mt-swipe-item>
@@ -37,14 +43,27 @@
 export default {
   name: "highGoods",
   data() {
-    return {};
+    return {
+        jpactive:"active",
+        flactive:""
+    };
   },
-  methods: {}
+  methods: {
+      change(status){
+          this.jpactive = "";
+          this.flactive = "";
+          if(status == 1){
+            this.jpactive = "active";
+          }else{
+            this.flactive = "flactive";
+          }
+      }
+  }
 };
 </script>
 <style>
 .highGoods {
-  margin:40px 0;
+  /* margin:40px 0; */
 }
 .highGoods .high-swipe{
     height:120px;
@@ -97,5 +116,35 @@ export default {
 .highGoods .advertising{
     width: 100%;
     height:100px;
+}
+.highGoods .head{
+    width:100%;
+    text-align: center;
+}
+.highGoods .nav{
+    display: inline-block;
+    border:1px solid #FF0000;
+    margin:10px auto;
+    border-radius: 40px;
+}
+.highGoods .nav li{
+    width: 50px;
+    line-height: 23px;
+    float: left;
+    font-size: 12px;
+    color: #ABABAB;
+    text-align: center;
+}
+.highGoods .nav .active{
+    background: #FF0000;
+    color: #fff;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+.highGoods .nav .flactive{
+    background: #FF0000;
+    color: #fff;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 </style>

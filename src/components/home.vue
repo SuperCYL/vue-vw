@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <mt-header :title="tittle" fixed></mt-header>
+    <mt-header v-show="isShow" :title="tittle" fixed></mt-header>
     <router-view />
     <mt-tabbar v-model="selected" fixed>
       <mt-tab-item id="recommend">
@@ -31,6 +31,7 @@ export default {
   name:"hi",
     data(){
       return{
+        isShow:true,
         selected:"recommend",
         tittle:"推荐"
       }
@@ -38,10 +39,12 @@ export default {
     watch: {
       selected: function (val, oldVal) {
         console.log(val)
+        this.isShow = true;
         this.$router.push("/"+val);
         if(val == "recommend"){
           this.tittle = "推荐";
         }else if(val=="highgoods"){
+          this.isShow = false;
           this.tittle = "精品";
         }else if(val=="stunnerClub"){
           this.tittle = "尤物社";
