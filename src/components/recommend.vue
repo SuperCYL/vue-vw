@@ -5,6 +5,9 @@
                 <li>
                     <div>hi</div>
                     <img src="http://pic33.nipic.com/20131007/13639685_123501617185_2.jpg" />
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-bofang"></use>
+                    </svg>
                 </li>
                 <li>
                     <div>hi</div>
@@ -41,8 +44,19 @@ export default {
     width:100%;
     display: block;
 }
+.recommend ul li{
+    position: relative;
+}
 .recommend ul li div{
     padding:5px;
     color:#999;
+}
+.recommend ul li .icon{
+    width:30px;
+    height:30px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-right:15px;
 }
 </style>

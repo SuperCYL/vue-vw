@@ -14,6 +14,7 @@ import'mint-ui/lib/style.css'
 
 //字体图标
 import '../static/iconfont/iconfont.css'
+import '../static/iconfont/iconfont.js'
 Vue.use(Mint);
 
 Vue.config.productionTip = false

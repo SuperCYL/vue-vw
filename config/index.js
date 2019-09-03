@@ -12,7 +12,7 @@ module.exports = {
         assetsPublicPath: '/',
         proxyTable: {
             '/upload': {
-                target: "http://192.168.0.229/udap/api",
+                target: "http://47.98.220.235:8088",
                 changeOrigin: true,
                 pathRewrite: {
                     '^/upload': '/upload'
